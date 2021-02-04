@@ -1,0 +1,22 @@
+<h2>examen</h2>
+
+<div>
+  <label>
+    J name:
+    <input #jirafaName />
+  </label>
+  
+  <button (click)="add(jirafaName.value); jirafaName.value=''">
+    add
+  </button>
+</div>
+
+<ul class="jirafa">
+  <li *ngFor="La jirafa">
+    <a routerLink="/detail/{{jirafa.id}}">
+      <span class="badge">{{jirafa.id}}</span> {{jirafa.name}}
+    </a>
+    <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+  </li>
+</ul>
